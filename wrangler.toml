@@ -15,17 +15,17 @@ binding = "USAGE"
 id = "412753750ce045448f20ae8790ebcc9f"
 
 [vars]
-UPGRADE_URL = "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/upgrade"
+UPGRADE_URL = "https://fda-approvals-mcp.atlasword.workers.dev/upgrade"
 OPENFDA_BASE = "https://api.fda.gov"
 PRODUCT_NAME = "fda-approvals-mcp"
 PRODUCT_TAGLINE = "MCP server for FDA data: drug approvals, recalls, adverse events, 510(k) device clearances."
-PRODUCT_URL = "https://fda-approvals-mcp.prakhar-cognizance.workers.dev"
+PRODUCT_URL = "https://fda-approvals-mcp.atlasword.workers.dev"
 DODO_PRODUCT_ID_SOLO = "pdt_0NgkSlyyslh52XhEf3368"
 DODO_PRODUCT_ID_TEAM = "pdt_0NgkSm1f6Kyo5gDNq3IOZ"
 DODO_PRODUCT_ID_PRO  = "pdt_0NgkSm40uD7IEepF4ke8y"
 FROM_EMAIL = "prakshatechnologies@gmail.com"
 DODO_BASE = "https://live.dodopayments.com"
-CUSTOMER_PORTAL_RETURN_URL = "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/account"
+CUSTOMER_PORTAL_RETURN_URL = "https://fda-approvals-mcp.atlasword.workers.dev/account"
 
 # Secrets:
 #   OPENFDA_API_KEY         (optional: raises the 240/min limit to 1000/min)

@@ -25,7 +25,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 - **Display name:** `FDA Approvals & Recalls`
 - **Description:** `Drug approvals, device 510(k) clearances, recalls, and adverse-event reports — wraps openFDA.`
 - **GitHub URL:** `https://github.com/guptaprakhariitr/fda-approvals-mcp`
-- **Endpoint URL:** `https://fda-approvals-mcp.prakhar-cognizance.workers.dev/mcp`
+- **Endpoint URL:** `https://fda-approvals-mcp.atlasword.workers.dev/mcp`
 - **Tags:** fda, openfda, drug-approval, 510k, recall, faers, clinical-llm
 - **License:** MIT
 - **Transport:** HTTP (remote)
@@ -50,7 +50,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 ### Twitter / X thread template
 > Just shipped fda-approvals-mcp — Model Context Protocol server: drug approvals, device 510(k) clearances, recalls, and adverse-event reports — wraps openfda.
 >
-> Endpoint: https://fda-approvals-mcp.prakhar-cognizance.workers.dev/mcp
+> Endpoint: https://fda-approvals-mcp.atlasword.workers.dev/mcp
 > GitHub: https://github.com/guptaprakhariitr/fda-approvals-mcp
 >
 > Free tier available. Paid from $9/mo.
