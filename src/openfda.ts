@@ -187,10 +187,13 @@ export class OpenFdaClient {
 // ── Helpers (broken out for testability) ─────────────────────────────────────
 
 export function buildSearch(parts: Record<string, string | undefined>): string {
+  // openFDA's parser tolerates "+AND+" only in some endpoints; " AND " is the
+  // documented form and works everywhere. encodeURIComponent on the URL layer
+  // will turn the spaces into `+` chars which openFDA decodes back to spaces.
   return Object.entries(parts)
     .filter(([, v]) => v !== undefined && v !== "")
     .map(([k, v]) => `${k}:${quoteIfNeeded(v!)}`)
-    .join("+AND+");
+    .join(" AND ");
 }
 
 export function dateRange(from?: string, to?: string): string | undefined {

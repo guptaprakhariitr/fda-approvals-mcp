@@ -65,8 +65,8 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe("openFDA query building", () => {
-  it("buildSearch composes AND-joined search params", () => {
-    expect(buildSearch({ a: "1", b: "two words" })).toBe('a:1+AND+b:"two words"');
+  it("buildSearch composes AND-joined search params (space-separated)", () => {
+    expect(buildSearch({ a: "1", b: "two words" })).toBe('a:1 AND b:"two words"');
   });
   it("dateRange formats range", () => {
     expect(dateRange("2026-01-01", "2026-06-01")).toBe("[20260101+TO+20260601]");
