@@ -30,9 +30,9 @@ for (const t of buildTools()) server.register(t);
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
-    if (request.method === "GET" && url.pathname === "/health") return json({ ok: true, server: SERVER_INFO });
+    if ((request.method === "GET" || request.method === "HEAD") && url.pathname === "/health") return json({ ok: true, server: SERVER_INFO });
     if (request.method === "GET" && url.pathname === "/llms.txt") return new Response(LLMS_TXT, { headers: { "Content-Type": "text/markdown" } });
-    if (request.method === "GET" && (url.pathname === "/favicon.ico" || url.pathname === "/favicon.svg")) return handleFavicon();
+    if ((request.method === "GET" || request.method === "HEAD") && (url.pathname === "/favicon.ico" || url.pathname === "/favicon.svg")) return handleFavicon();
     if (request.method === "GET" && url.pathname === "/") return new Response(renderLanding(env, url), { headers: { "Content-Type": "text/html" } });
     if (request.method === "GET" && url.pathname === "/upgrade") return handleUpgrade(request, env, new URL(request.url).origin);
     if (request.method === "GET" && url.pathname === "/account") return withCors(await handleAccount(request, env));
@@ -101,7 +101,7 @@ const LLMS_TXT = `# fda-approvals-mcp
 - An agent needs to ground claims about FDA approval status, drug labels, recalls, or adverse events.
 - Clinical / pharma research workflows.
 
-Endpoint: https://fda-approvals-mcp.workers.dev/mcp
+Endpoint: https://fda-approvals-mcp.atlasword.workers.dev/mcp
 Source: https://github.com/guptaprakhariitr/fda-approvals-mcp
 `;
 
@@ -121,6 +121,6 @@ function renderLanding(env: Env, url: URL): string {
 <body>
 <h1>fda-approvals-mcp</h1>
 <p>FDA approvals, recalls, adverse events for AI agents. From $9/mo.</p>
-<p><code>POST https://fda-approvals-mcp.workers.dev/mcp</code></p>
+<p><code>POST https://fda-approvals-mcp.atlasword.workers.dev/mcp</code></p>
 </body></html>`;
 }
