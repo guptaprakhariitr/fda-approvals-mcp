@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.guptaprakhariitr/fda-approvals-mcp",
+  "description": "Drug approvals, device 510(k) clearances, recalls, and adverse-event reports \u2014 wraps openFDA.",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/guptaprakhariitr/fda-approvals-mcp",
+    "source": "github"
+  },
+  "version_detail": {
+    "version": "0.3.0",
+    "release_date": "2026-06-10T00:00:00Z",
+    "is_latest": true
+  },
+  "packages": [
+    {
+      "registry_name": "remote",
+      "name": "fda-approvals-mcp",
+      "version": "0.3.0",
+      "runtime_hint": "http",
+      "remote_url": "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/mcp",
+      "transport_type": "http"
+    }
+  ],
+  "remotes": [
+    {
+      "transport_type": "http",
+      "url": "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/mcp"
+    }
+  ],
+  "categories": [
+    "healthcare",
+    "regulatory",
+    "research"
+  ],
+  "tags": [
+    "fda",
+    "openfda",
+    "drug-approval",
+    "510k",
+    "recall",
+    "faers",
+    "clinical-llm"
+  ]
+}
