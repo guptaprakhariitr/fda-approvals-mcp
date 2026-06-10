@@ -1,0 +1,26 @@
+{
+  "name": "fda-approvals-mcp",
+  "version": "0.3.0",
+  "private": false,
+  "description": "MCP server for FDA data: drug approvals, recalls, adverse events, 510(k) device clearances. Wraps openFDA. Hosted on Cloudflare Workers.",
+  "type": "module",
+  "main": "src/index.ts",
+  "homepage": "https://fda-approvals-mcp.workers.dev",
+  "repository": { "type": "git", "url": "https://github.com/guptaprakhariitr/fda-approvals-mcp.git" },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "tail": "wrangler tail"
+  },
+  "keywords": ["mcp", "mcp-server", "claude", "cursor", "fda", "openfda", "drug-approval", "510k", "recall", "adverse-event", "clinical"],
+  "author": "Prakhar Gupta <prakshatechnologies@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260101.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "wrangler": "^3.80.0"
+  }
+}

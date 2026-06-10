@@ -1,0 +1,33 @@
+name = "fda-approvals-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "c732a9f0432540fe97ce4a65c3ee7fed"
+
+[[kv_namespaces]]
+binding = "USAGE"
+id = "412753750ce045448f20ae8790ebcc9f"
+
+[vars]
+UPGRADE_URL = "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/upgrade"
+OPENFDA_BASE = "https://api.fda.gov"
+PRODUCT_NAME = "fda-approvals-mcp"
+DODO_PRODUCT_ID_SOLO = "pdt_0NgkSlyyslh52XhEf3368"
+DODO_PRODUCT_ID_TEAM = "pdt_0NgkSm1f6Kyo5gDNq3IOZ"
+DODO_PRODUCT_ID_PRO  = "pdt_0NgkSm40uD7IEepF4ke8y"
+FROM_EMAIL = "prakshatechnologies@gmail.com"
+DODO_BASE = "https://live.dodopayments.com"
+CUSTOMER_PORTAL_RETURN_URL = "https://fda-approvals-mcp.prakhar-cognizance.workers.dev/account"
+
+# Secrets:
+#   OPENFDA_API_KEY         (optional: raises the 240/min limit to 1000/min)
+#   DODO_API_KEY
+#   DODO_WEBHOOK_SECRET
+#   RESEND_API_KEY          (optional)
+#   ADMIN_TOKEN

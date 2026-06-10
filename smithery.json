@@ -1,0 +1,24 @@
+{
+  "$schema": "https://smithery.ai/schema/server.json",
+  "name": "fda-approvals-mcp",
+  "displayName": "FDA Approvals & Recalls",
+  "description": "Drug approvals, device 510(k) clearances, recalls, and adverse-event reports. Wraps the openFDA free public API.",
+  "version": "0.3.0",
+  "license": "MIT",
+  "homepage": "https://fda-approvals-mcp.workers.dev",
+  "repository": "https://github.com/guptaprakhariitr/fda-approvals-mcp",
+  "categories": ["healthcare", "regulatory", "research"],
+  "tags": ["fda", "openfda", "drug-approval", "510k", "recall", "faers", "clinical-llm"],
+  "transport": { "type": "http", "url": "https://fda-approvals-mcp.workers.dev/mcp" },
+  "auth": { "type": "bearer", "freeTier": { "monthlyCalls": 100, "ratePerMinute": 10 } },
+  "tools": ["fda_drug_approval_search", "fda_drug_label", "fda_recall_search", "fda_adverse_events", "fda_510k_search", "fda_drug_shortages"],
+  "pricing": {
+    "currency": "USD",
+    "tiers": [
+      { "name": "Free", "price": 0,  "monthlyCalls": 100 },
+      { "name": "Solo", "price": 9,  "monthlyCalls": 2000 },
+      { "name": "Team", "price": 29, "monthlyCalls": 10000 },
+      { "name": "Pro",  "price": 79, "monthlyCalls": 50000 }
+    ]
+  }
+}
