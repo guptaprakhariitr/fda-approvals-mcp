@@ -14,12 +14,12 @@
   },
   "packages": [
     {
-      "registry_name": "remote",
-      "name": "fda-approvals-mcp",
-      "version": "0.3.0",
-      "runtime_hint": "http",
-      "remote_url": "https://fda-approvals-mcp.atlasword.workers.dev/mcp",
-      "transport_type": "http"
+      "registryType": "npm",
+      "identifier": "@insnapsprakhar/fda-approvals-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ],
   "remotes": [
@@ -41,5 +41,6 @@
     "recall",
     "faers",
     "clinical-llm"
-  ]
+  ],
+  "version": "0.0.2"
 }
