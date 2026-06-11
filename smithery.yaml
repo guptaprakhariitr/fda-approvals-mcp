@@ -1,0 +1,69 @@
+# Smithery registry config — https://smithery.ai/docs/build/project-config/smithery-yaml
+# This is an HTTP-transport MCP server; Smithery hosts the listing and proxies
+# clients straight to our Cloudflare Workers endpoint.
+
+name: fda-approvals-mcp
+displayName: FDA Approvals & Recalls
+description: |
+  Drug approvals, device 510(k) clearances, recalls, and adverse-event reports. Wraps the openFDA free public API.
+homepage: https://fda-approvals-mcp.atlasword.workers.dev
+repository: https://github.com/guptaprakhariitr/fda-approvals-mcp
+license: MIT
+version: "0.3.0"
+
+runtime: container
+
+startCommand:
+  type: http
+  url: https://fda-approvals-mcp.atlasword.workers.dev/mcp
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API key (optional)
+        description: |
+          Bearer token from https://fda-approvals-mcp.atlasword.workers.dev/upgrade.
+          Leave blank for the anonymous free tier (~100 calls/month/IP).
+    required: []
+  exampleConfig:
+    apiKey: ""
+  commandFunction: |-
+    (config) => ({
+      type: "http",
+      url: "https://fda-approvals-mcp.atlasword.workers.dev/mcp",
+      headers: config.apiKey ? { Authorization: `Bearer ${config.apiKey}` } : {}
+    })
+
+remote:
+  type: http
+  url: https://fda-approvals-mcp.atlasword.workers.dev/mcp
+
+categories:
+  - healthcare
+  - regulatory
+  - research
+tags:
+  - fda
+  - openfda
+  - drug-approval
+  - 510k
+  - recall
+  - faers
+  - clinical-llm
+
+tools:
+  - name: fda_drug_approval_search
+  - name: fda_drug_label
+  - name: fda_recall_search
+  - name: fda_adverse_events
+  - name: fda_510k_search
+  - name: fda_drug_shortages
+
+auth:
+  type: bearer
+  required: false
+  description: |
+    Optional. Anonymous free tier works for ~100 calls/month per IP. For higher
+    quotas, grab a key from https://fda-approvals-mcp.atlasword.workers.dev/upgrade and pass
+    it as `Authorization: Bearer <key>`.
