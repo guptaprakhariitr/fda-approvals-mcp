@@ -3,7 +3,7 @@
   "name": "io.github.guptaprakhariitr/fda-approvals-mcp",
   "title": "FDA Approvals",
   "description": "FDA drug approvals, 510(k) device clearances, recalls and adverse-event reports.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "websiteUrl": "https://fda-approvals-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/fda-approvals-mcp",
@@ -13,16 +13,6 @@
     {
       "type": "streamable-http",
       "url": "https://fda-approvals-mcp.atlasword.workers.dev/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "@insnapsprakhar/fda-approvals-mcp",
-      "version": "0.3.0",
-      "transport": {
-        "type": "stdio"
-      }
     }
   ]
 }
