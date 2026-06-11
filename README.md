@@ -207,10 +207,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/fda-approvals-mcp`](https://www.npmjs.com/package/@atlasword/fda-approvals-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/fda-approvals-mcp`](https://www.npmjs.com/package/@insnapsprakhar/fda-approvals-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/fda-approvals-mcp
+npx -y @insnapsprakhar/fda-approvals-mcp
 ```
 
 Or wire it into your MCP client:
@@ -220,7 +220,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "fda-approvals": {
       "command": "npx",
-      "args": ["-y", "@atlasword/fda-approvals-mcp"]
+      "args": ["-y", "@insnapsprakhar/fda-approvals-mcp"]
     }
   }
 }
