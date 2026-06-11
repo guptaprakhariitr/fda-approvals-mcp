@@ -1,45 +1,28 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.guptaprakhariitr/fda-approvals-mcp",
-  "description": "Drug approvals, device 510(k) clearances, recalls, and adverse-event reports \u2014 wraps openFDA.",
-  "status": "active",
+  "title": "FDA Approvals",
+  "description": "FDA drug approvals, 510(k) device clearances, recalls and adverse-event reports.",
+  "version": "0.3.0",
+  "websiteUrl": "https://fda-approvals-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/fda-approvals-mcp",
     "source": "github"
   },
-  "version_detail": {
-    "version": "0.3.0",
-    "release_date": "2026-06-10T00:00:00Z",
-    "is_latest": true
-  },
-  "packages": [
-    {
-      "registry_name": "remote",
-      "name": "fda-approvals-mcp",
-      "version": "0.3.0",
-      "runtime_hint": "http",
-      "remote_url": "https://fda-approvals-mcp.atlasword.workers.dev/mcp",
-      "transport_type": "http"
-    }
-  ],
   "remotes": [
     {
-      "transport_type": "http",
+      "type": "streamable-http",
       "url": "https://fda-approvals-mcp.atlasword.workers.dev/mcp"
     }
   ],
-  "categories": [
-    "healthcare",
-    "regulatory",
-    "research"
-  ],
-  "tags": [
-    "fda",
-    "openfda",
-    "drug-approval",
-    "510k",
-    "recall",
-    "faers",
-    "clinical-llm"
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@insnapsprakhar/fda-approvals-mcp",
+      "version": "0.3.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
   ]
 }
